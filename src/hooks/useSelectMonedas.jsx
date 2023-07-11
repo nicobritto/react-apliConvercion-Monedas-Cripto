@@ -27,13 +27,13 @@ const useSelectMonedas = (frace,monedas) => {
             <Label>{frace}</Label>
             <Select 
                 value={state}
-                onChange={ e => setState(e.target.value)}
-            >
+                onChange={ e => setState(e.target.value)}>
+                    
                 <option value="">Selecciones</option>
-                {monedas.map( (opcion) => (
+                {monedas.map( (op) => (
                     <option 
-                        key={monedas.id}
-                        value={monedas.id}> {opcion.nombre} </option>))}
+                        key={op.id}
+                        value={op.id} > {op.nombre} </option>))}
             </Select>
         </>
     )
